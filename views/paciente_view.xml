@@ -1,0 +1,89 @@
+
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="pacientes.listado_pacientes_tree">
+            <field name="name">Lista de pacientes</field>
+            <field name="model">pacientes.paciente_model</field>
+            <field name="arch" type="xml">
+              <tree>
+                <field name="dni"/>
+                <field name="name"/>
+                <field name="apellidos"/>
+                <field name="telefono"/>
+                <field name="fechaNacimiento"/>
+                <field name="email"/>
+              </tree>
+            </field>
+          </record>
+
+          <record model="ir.ui.view" id="pacientes.paciente_model_form">
+            <field name="name">Formulario de Pacientes</field>
+            <field name="model">pacientes.paciente_model</field>
+            <field name="arch" type="xml">
+              <form string="Nuevo paciente">
+      
+                <sheet>
+
+                  <notebook>
+      
+                    <page string="Datos Personales">
+                    <group name="Padre">
+                    <group >
+                      <h2 style="color:#a256a0;" >Datos Paciente</h2>
+                      <label for="dni" class="oe_edit_only" />
+                  <h2>
+                    <field name="dni" />
+                  </h2>
+                     
+                      <field name="name"/>
+                      <field name="apellidos"/>
+                      <field name="telefono"/>
+                      <field name="fechaNacimiento"/>  
+                      <field name="email" widget="email"/>   
+                      <field name="numVisitas" readonly="True"/>                
+                    </group>
+                    
+                    <group >
+                      <h2 style="color:#a256a0;" >FOTO</h2>
+                      <field name="foto"  widget="image"  style="width: 180px; height: 250px;"/>
+                    </group>
+                    
+                      
+                  </group>
+                    </page>
+                    <page string="Historial de visitas">
+                    </page>
+                 
+      
+                   
+      
+                </notebook>
+      
+                </sheet>
+              </form>
+            </field>
+          </record>
+
+
+
+
+
+
+
+
+
+
+
+
+<record model="ir.actions.act_window" id="pacientes.action_window_paciente">
+    <field name="name">Listado de pacientes</field>
+    <field name="res_model">pacientes.paciente_model</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+
+
+
+</data>
+</odoo>

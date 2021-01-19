@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+      <menuitem name="Pacientes" id="pacientes.menu_root" />
+      <menuitem name="Pacientes" id="pacientes.menu_paciente" parent="pacientes.menu_root" action="pacientes.action_window_paciente"/>
+      <menuitem name="Visitas" id="pacientes.menu_visitas" parent="pacientes.menu_root" action="pacientes.action_window_visitas"/>
+
+      
+    </data>
+  </odoo>

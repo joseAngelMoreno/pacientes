@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+      <record model="ir.ui.view" id="pacientes.listado_visitas_tree">
+        <field name="name">Listado de visitas</field>
+        <field name="model">pacientes.visitas_model</field>
+        <field name="arch" type="xml">
+      
+          <tree>
+          <field name="paciente_id"/>
+          <field name="fecha"/>
+          <field name="detalle"/>
+         
+          </tree>
+        </field>
+        </record>
+
+        <record model="ir.ui.view" id="pacientes.visitas_model_form">
+            <field name="name">Formulario de Pacientes</field>
+            <field name="model">pacientes.visitas_model</field>
+            <field name="arch" type="xml">
+              <form string="Nuevo visita">
+                <sheet>
+                  <group >
+                    <field name="paciente_id"/>
+                      <field name="fecha"/>
+                      <field name="detalle"/>
+                      
+                    </group>
+                </sheet>
+              </form>
+            </field>
+          </record>
+
+        <record model="ir.actions.act_window" id="pacientes.action_window_visitas">
+            <field name="name">Listado de visitas</field>
+            <field name="res_model">pacientes.visitas_model</field>
+            <field name="view_mode">tree,form</field>
+          </record>
+        
+        
+        
+        
+    </data>
+</odoo>
