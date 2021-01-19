@@ -53,6 +53,10 @@
                   </group>
                     </page>
                     <page string="Historial de visitas">
+                      
+                      <field name="visita" /> 
+                      <field name="fotoEjercicios" widget="image"  style="width: 300px; height: 200px;"/> 
+                   
                     </page>
                  
       

@@ -9,4 +9,6 @@ class visitas_model(models.Model):
     fecha=fields.Date(string="Fecha",required=True,default=datetime.today())
     detalle=fields.Html(string="Detalle",required=True)
     paciente_id=fields.Many2one("pacientes.paciente_model","paciente")
+
+    
     
