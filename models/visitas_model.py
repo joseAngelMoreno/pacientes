@@ -6,7 +6,7 @@ class visitas_model(models.Model):
     _name = 'pacientes.visitas_model'
     _description = 'Modelo de Visitas'
 
-    fecha=fields.Date(string="Fecha",required=True,default=datetime.today())
+    fecha=fields.Date(string="Fecha",required=True,default=datetime.now())
     detalle=fields.Html(string="Detalle",required=True)
     paciente_id=fields.Many2one("pacientes.paciente_model","paciente")
 

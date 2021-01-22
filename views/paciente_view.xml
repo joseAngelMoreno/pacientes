@@ -53,15 +53,14 @@
                   </group>
                     </page>
                     <page string="Historial de visitas">
+                      <header>
+                        <button name="limpiaHistorial" type="object" string="Borrar historial" class="oe_highlight" />
+                      </header>
                       
                       <field name="visita" /> 
                       <field name="fotoEjercicios" widget="image"  style="width: 300px; height: 200px;"/> 
-                   
+                  
                     </page>
-                 
-      
-                   
-      
                 </notebook>
       
                 </sheet>

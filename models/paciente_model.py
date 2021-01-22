@@ -3,6 +3,7 @@ from datetime import datetime
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 import re
+
 class paciente_model(models.Model):
     _name = 'pacientes.paciente_model'
     _description = 'Modelo de Pacientes'
@@ -27,6 +28,11 @@ class paciente_model(models.Model):
     @api.depends("visita")
     def calcVisitas(self):
         self.numVisitas=len(self.visita)
+
+    def limpiaHistorial(self):
+        for i in self.visita:
+            i.unlink()
+    
 
     @api.constrains("fechaNacimiento")
     def _mayorEdad(self):
